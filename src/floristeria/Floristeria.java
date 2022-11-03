@@ -28,7 +28,7 @@ public class Floristeria {
 		productos.add(flor);
 	}
 
-	public void addDeco(Decoración deco) {
+	public void addDeco(Decoracion deco) {
 		productos.add(deco);
 	}
 
@@ -59,7 +59,7 @@ public class Floristeria {
 
 		List<Arbol> arboles = new ArrayList<>();
 		List<Flor> flores = new ArrayList<>();
-		List<Decoración> decoraciónes = new ArrayList<>();
+		List<Decoracion> decoraciones = new ArrayList<>();
 
 		for (Producto p : productos) {
 
@@ -67,8 +67,8 @@ public class Floristeria {
 				arboles.add((Arbol) p);
 			if (p instanceof Flor)
 				flores.add((Flor) p);
-			if (p instanceof Decoración)
-				decoraciónes.add((Decoración) p);
+			if (p instanceof Decoracion)
+				decoraciones.add((Decoracion) p);
 
 		}
 
@@ -86,7 +86,7 @@ public class Floristeria {
 
 		result += "\n DECORACIONES: \n";
 
-		for (Decoración d : decoraciónes) {
+		for (Decoracion d : decoraciones) {
 			result += d.toString();
 		}
 
@@ -99,7 +99,7 @@ public class Floristeria {
 
 		List<Arbol> arboles = new ArrayList<>();
 		List<Flor> flores = new ArrayList<>();
-		List<Decoración> decoraciónes = new ArrayList<>();
+		List<Decoracion> decoraciones = new ArrayList<>();
 
 		for (Producto p : productos) {
 
@@ -107,13 +107,13 @@ public class Floristeria {
 				arboles.add((Arbol) p);
 			if (p instanceof Flor)
 				flores.add((Flor) p);
-			if (p instanceof Decoración)
-				decoraciónes.add((Decoración) p);
+			if (p instanceof Decoracion)
+				decoraciones.add((Decoracion) p);
 
 		}
 
 		String cantidades = "Floristeria " + nombre + " tiene: \n" + "arboles: " + arboles.size() + "\n" + "flores: "
-				+ flores.size() + "\n" + "decoración: " + decoraciónes.size() + "\n";
+				+ flores.size() + "\n" + "decoraciï¿½n: " + decoraciones.size() + "\n";
 
 		return cantidades;
 	}

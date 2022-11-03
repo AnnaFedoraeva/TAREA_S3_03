@@ -9,14 +9,14 @@ import java.util.Scanner;
 //Crear Floristeria.
 //Afegir Arbre.
 //Afegir Flor.
-//Afegir Decoració.
-//Stock: Imprimeix per pantalla tots els arbres, flors i decoració que té la floristeria.
+//Afegir Decoraciï¿½.
+//Stock: Imprimeix per pantalla tots els arbres, flors i decoraciï¿½ que tï¿½ la floristeria.
 //Retirar arbre.
 //Retirar flor.
-//Retirar decoració.
+//Retirar decoraciï¿½.
 //Printar per pantalla stock amb quantitats.
 //Printar per pantalla valor total de la floristeria.
-//Crear tickets de compra amb múltiples objectes.
+//Crear tickets de compra amb mï¿½ltiples objectes.
 //Mostrar una llista de compres antigues.
 //Visualitzar el total de diners guanyats amb totes les vendes.
 
@@ -34,7 +34,7 @@ public class Main {
 		Arbol arbol2 = new Arbol(45, 1.29);
 		Arbol arbol3 = new Arbol(49, 1.34);
 		Flor flor = new Flor(12, "rosa");
-		Decoración deco = new Decoración(13, "plastico");
+		Decoracion deco = new Decoracion(13, "plastico");
 
 		floristeria1.addArbol(arbol1);
 		floristeria1.addArbol(arbol2);
@@ -61,7 +61,7 @@ public class Main {
 		do {
 			switch (menu()) {
 			case 1:
-				añadirEnStock(floristeria1);
+				anadirEnStock(floristeria1);
 				break;
 			case 2:
 				eliminarEnStock(floristeria1);
@@ -74,7 +74,7 @@ public class Main {
 				System.out.println(verValorStock(floristeria1));
 				break;
 			case 5:
-				añadirEnTicket(floristeria1, tickets);
+				anadirEnTicket(floristeria1, tickets);
 				break;
 			case 6:
 				listaTickets(tickets);
@@ -83,7 +83,7 @@ public class Main {
 				System.out.println(ventasGanancias(tickets));
 				break;
 			case 0:
-				System.out.println("Gracias por utilizar la aplicación.");
+				System.out.println("Gracias por utilizar la aplicaciï¿½n.");
 				exit = true;
 				break;
 			}
@@ -97,12 +97,12 @@ public class Main {
 		final byte MAXIMO = 7;
 
 		do {
-			System.out.println("\nMENú PRINCIPAL");
-			System.out.println("1. Añadir producto.");
+			System.out.println("\nMENï¿½ PRINCIPAL");
+			System.out.println("1. Aï¿½adir producto.");
 			System.out.println("2. Eliminar producto.");
 			System.out.println("3. Mostrar el stock con cantidades");
 			System.out.println("4. Mostrar el valor total de la floristeria");
-			System.out.println("5. Añadir productos en un ticket de compra");
+			System.out.println("5. Aï¿½adir productos en un ticket de compra");
 			System.out.println("6. Mostrar los tickets de compra antiguos.");
 			System.out.println("7. Mostrar el valor de todas las ventas.");
 			System.out.println("0. Salir de aplicacion.\n");
@@ -114,10 +114,10 @@ public class Main {
 		return option;
 	}
 
-	public static String añadirEnStock(Floristeria floristeria1) throws IOException {
+	public static String anadirEnStock(Floristeria floristeria1) throws IOException {
 		String string = "";
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoración");
+		System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoraciï¿½n");
 		int producto = sc.nextInt();
 		if (producto == 1) {
 			System.out.println("Introduce la altura del arbol:");
@@ -127,7 +127,7 @@ public class Main {
 			Arbol arbol2 = new Arbol(precioA, altura);
 			floristeria1.addArbol(arbol2);
 			GestionArchivo.FileWriterProductos(floristeria1, true);
-			string.equals("El producto está añadido correctamente.");
+			string.equals("El producto estï¿½ aï¿½adido correctamente.");
 		} else if (producto == 2) {
 			System.out.println("Introduce el color de la flor:");
 			String color = sc.next();
@@ -135,15 +135,15 @@ public class Main {
 			double precioF = sc.nextDouble();
 			Flor flor2 = new Flor(precioF, color);
 			floristeria1.addFlor(flor2);
-			string.equals("El producto está añadido correctamente.");
+			string.equals("El producto estï¿½ aï¿½adido correctamente.");
 			GestionArchivo.FileWriterProductos(floristeria1, true);
 		} else if (producto == 3) {
-			System.out.println("Introduce el precio de la decoración:");
+			System.out.println("Introduce el precio de la decoraciï¿½n:");
 			double precioD = sc.nextDouble();
 			String material = "";
 			boolean out = false;
 			while (!out) {
-				System.out.println("Elige material de la decoración:" + "\n" + "1. plastico" + "\n" + "2. madera");
+				System.out.println("Elige material de la decoraciï¿½n:" + "\n" + "1. plastico" + "\n" + "2. madera");
 				int n = sc.nextInt();
 				if (n == 1) {
 					material = "plastico";
@@ -155,10 +155,10 @@ public class Main {
 					System.out.println("Por favor, elige entre dos tipos de material: madera o plastico");
 				}
 			}
-			Decoración deco2 = new Decoración(precioD, material);
+			Decoracion deco2 = new Decoracion(precioD, material);
 			floristeria1.addDeco(deco2);
 			GestionArchivo.FileWriterProductos(floristeria1, true);
-			string.equals("El producto está añadido correctamente.");
+			string.equals("El producto estï¿½ aï¿½adido correctamente.");
 		}
 
 		return string;
@@ -192,22 +192,22 @@ public class Main {
 
 		Ticket ticket = new Ticket();
 
-		System.out.println("El nuevo ticket ya está creado.");
+		System.out.println("El nuevo ticket ya estï¿½ creado.");
 
 		return ticket;
 	}
 
-	public static void añadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) throws IOException {
+	public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		boolean out = false;
 		do {
-			System.out.println("¿Quieres crear un nuevo ticket? " + "\n 1. si" + "\n 2. no");
+			System.out.println("ï¿½Quieres crear un nuevo ticket? " + "\n 1. si" + "\n 2. no");
 			try {
 				int isCrear = sc.nextInt();
 				if (isCrear == 1) {
 					Ticket ticket1 = crearTicket();
 					System.out.println(floristeria1.getStock());
-					System.out.println("Introducir id del producto que deseas añadir:");
+					System.out.println("Introducir id del producto que deseas aï¿½adir:");
 					int idProduct = sc.nextInt();
 					int p = floristeria1.buscarProducto(idProduct);
 					ticket1.addEnTicket(floristeria1.getProductos().get(p));
@@ -220,7 +220,7 @@ public class Main {
 					System.out.println("Introducir el id del ticket: ");
 					int idTicket = sc.nextInt();
 					System.out.println(floristeria1.getStock());
-					System.out.println("Introducir el id del producto que deseas añadir: ");
+					System.out.println("Introducir el id del producto que deseas aï¿½adir: ");
 					int idProduct = sc.nextInt();
 					int p = floristeria1.buscarProducto(idProduct);
 					tickets.get(idTicket).addEnTicket(floristeria1.getProductos().get(p));
@@ -229,15 +229,15 @@ public class Main {
 					GestionArchivo.FileWriterTickets(tickets, false);
 					out = true;
 				} else {
-					System.out.println("Por favor, elige una de las opciónes:\n");
+					System.out.println("Por favor, elige una de las opciï¿½nes:\n");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Por favor, elige una de las opciónes:\n");
+				System.out.println("Por favor, elige una de las opciï¿½nes:\n");
 				sc.next();
 			}
 		} while (!out);
 
-		System.out.println("El producto está añadido");
+		System.out.println("El producto estï¿½ aï¿½adido");
 	}
 
 	public static void listaTickets(ArrayList<Ticket> tickets) {

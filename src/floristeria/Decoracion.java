@@ -1,6 +1,6 @@
 package floristeria;
 
-public class Decoración extends Producto {
+public class Decoracion extends Producto {
 	
 	
 	private String material;
@@ -12,7 +12,7 @@ public class Decoración extends Producto {
 				+ "" + getClass().getSimpleName() + ", material: " + this.material + "\n";
 	}
 
-	public Decoración(double precio, String material) {
+	public Decoracion(double precio, String material) {
 		super(precio);
 		this.material = material;
 
