@@ -6,24 +6,9 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//Crear Floristeria.
-//Afegir Arbre.
-//Afegir Flor.
-//Afegir Decoraci�.
-//Stock: Imprimeix per pantalla tots els arbres, flors i decoraci� que t� la floristeria.
-//Retirar arbre.
-//Retirar flor.
-//Retirar decoraci�.
-//Printar per pantalla stock amb quantitats.
-//Printar per pantalla valor total de la floristeria.
-//Crear tickets de compra amb m�ltiples objectes.
-//Mostrar una llista de compres antigues.
-//Visualitzar el total de diners guanyats amb totes les vendes.
-
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		// TODO Auto-generated method stub
 
 		// Crear floristeria:
 		Floristeria floristeria1 = new Floristeria("Flower");
@@ -44,7 +29,7 @@ public class Main {
 
 		floristeria1.addDeco(deco);
 
-		//Crear tickets:
+		// Crear tickets:
 		ArrayList<Ticket> tickets = new ArrayList<>();
 
 		Ticket ticket1 = new Ticket();
