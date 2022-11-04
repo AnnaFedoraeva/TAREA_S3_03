@@ -12,11 +12,10 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
 
-		// Crear floristeria:
+		// Creamos la floristeria
 		Floristeria floristeria1 = new Floristeria("Flower");
 
-		// Crear stock:
-
+		// Creamos stock inicial y lo añadimos
 		Arbol arbol1 = new Arbol(40, 1.11);
 		Arbol arbol2 = new Arbol(45, 1.29);
 		Arbol arbol3 = new Arbol(49, 1.34);
@@ -26,12 +25,10 @@ public class Main {
 		floristeria1.addArbol(arbol1);
 		floristeria1.addArbol(arbol2);
 		floristeria1.addArbol(arbol3);
-
 		floristeria1.addFlor(flor);
-
 		floristeria1.addDeco(deco);
 
-		// Crear tickets:
+		// Creamos tickets iniciales y los añadimos
 		ArrayList<Ticket> tickets = new ArrayList<>();
 
 		Ticket ticket1 = new Ticket();
@@ -197,24 +194,22 @@ public class Main {
 					// Creamos el ticket
 					Ticket ticket1 = crearTicket();
 					do {
-					// Mostramos el stock para poder añadir al ticket
-					System.out.println(floristeria1.getStock());
-					System.out.print("Introduzca el id del producto que deseas añadir: ");
-					idProduct = sc.nextInt();
-					p = floristeria1.buscarProducto(idProduct);
-					ticket1.addEnTicket(floristeria1.getProductos().get(p));
-					// Añadimos el producto al ticket
-					tickets.add(ticket1);
-					// Eliminamos el producto del stock actual
-					floristeria1.remove(p);
-					// Eliminamos el producto del txt de productos
-					GestionArchivo.FileWriterProductos(floristeria1, false);
-					// Añadimos el ticket al txt de tickets
-					GestionArchivo.FileWriterTickets(tickets, true);
-					System.out.println("\n¿Quieres añadir otro producto al ticket?"
-							+ "\n1. Sí"
-							+ "\n2. No");
-					seguir = sc.nextInt();
+						// Mostramos el stock para poder añadir al ticket
+						System.out.println(floristeria1.getStock());
+						System.out.print("Introduzca el id del producto que deseas añadir: ");
+						idProduct = sc.nextInt();
+						p = floristeria1.buscarProducto(idProduct);
+						ticket1.addEnTicket(floristeria1.getProductos().get(p));
+						// Añadimos el producto al ticket
+						tickets.add(ticket1);
+						// Eliminamos el producto del stock actual
+						floristeria1.remove(p);
+						// Eliminamos el producto del txt de productos
+						GestionArchivo.FileWriterProductos(floristeria1, false);
+						// Añadimos el ticket al txt de tickets
+						GestionArchivo.FileWriterTickets(tickets, true);
+						System.out.println("\n¿Quieres añadir otro producto al ticket?" + "\n1. Sí" + "\n2. No");
+						seguir = sc.nextInt();
 					} while (seguir != 2);
 					break;
 
@@ -224,30 +219,28 @@ public class Main {
 					System.out.print("Introduzca el id del ticket: ");
 					idTicket = sc.nextInt();
 					do {
-					// Mostramos el stock para poder añadir al ticket
-					System.out.println(floristeria1.getStock());
-					System.out.print("Introduzca el id del producto que deseas añadir: ");
-					idProduct = sc.nextInt();
-					p = floristeria1.buscarProducto(idProduct);
-					// Accedemos al ticket y añadimos el producto
-					tickets.get(idTicket).addEnTicket(floristeria1.getProductos().get(p));
-					// Eliminamos el producto del stock actual
-					floristeria1.remove(p);
-					// Eliminamos el producto del txt de productos
-					GestionArchivo.FileWriterProductos(floristeria1, false);
-					// Añadimos el ticket al txt de tickets
-					GestionArchivo.FileWriterTickets(tickets, false);
-					System.out.println("\n¿Quieres añadir otro producto al ticket?"
-							+ "\n1. Sí"
-							+ "\n2. No");
-					seguir = sc.nextInt();
+						// Mostramos el stock para poder añadir al ticket
+						System.out.println(floristeria1.getStock());
+						System.out.print("Introduzca el id del producto que deseas añadir: ");
+						idProduct = sc.nextInt();
+						p = floristeria1.buscarProducto(idProduct);
+						// Accedemos al ticket y añadimos el producto
+						tickets.get(idTicket).addEnTicket(floristeria1.getProductos().get(p));
+						// Eliminamos el producto del stock actual
+						floristeria1.remove(p);
+						// Eliminamos el producto del txt de productos
+						GestionArchivo.FileWriterProductos(floristeria1, false);
+						// Añadimos el ticket al txt de tickets
+						GestionArchivo.FileWriterTickets(tickets, false);
+						System.out.println("\n¿Quieres añadir otro producto al ticket?" + "\n1. Sí" + "\n2. No");
+						seguir = sc.nextInt();
 					} while (seguir != 2);
 					break;
 				}
 
 			} while (opcion != 0);
 		} catch (InputMismatchException e) {
-			System.out.println("Por favor, elige una de las opci�nes:\n");
+			System.out.println("ERROR. Elije una opción correcta");
 		}
 	}
 
