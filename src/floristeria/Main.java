@@ -176,51 +176,66 @@ public class Main {
 
 		Ticket ticket = new Ticket();
 
-		System.out.println("El nuevo ticket ya est� creado.");
-
 		return ticket;
 	}
 
 	public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) throws IOException {
-		boolean out = false;
-		do {
-			System.out.println("�Quieres crear un nuevo ticket? " + "\n 1. si" + "\n 2. no");
-			try {
-				int isCrear = sc.nextInt();
-				if (isCrear == 1) {
-					Ticket ticket1 = crearTicket();
-					System.out.println(floristeria1.getStock());
-					System.out.println("Introducir id del producto que deseas a�adir:");
-					int idProduct = sc.nextInt();
-					int p = floristeria1.buscarProducto(idProduct);
-					ticket1.addEnTicket(floristeria1.getProductos().get(p));
-					tickets.add(ticket1);
-					floristeria1.remove(p);
-					GestionArchivo.FileWriterProductos(floristeria1, false);
-					GestionArchivo.FileWriterTickets(tickets, true);
-				} else if (isCrear == 2) {
-					tickets.stream().forEach(System.out::println);
-					System.out.println("Introducir el id del ticket: ");
-					int idTicket = sc.nextInt();
-					System.out.println(floristeria1.getStock());
-					System.out.println("Introducir el id del producto que deseas a�adir: ");
-					int idProduct = sc.nextInt();
-					int p = floristeria1.buscarProducto(idProduct);
-					tickets.get(idTicket).addEnTicket(floristeria1.getProductos().get(p));
-					floristeria1.remove(p);
-					GestionArchivo.FileWriterProductos(floristeria1, false);
-					GestionArchivo.FileWriterTickets(tickets, false);
-					out = true;
-				} else {
-					System.out.println("Por favor, elige una de las opci�nes:\n");
-				}
-			} catch (InputMismatchException e) {
-				System.out.println("Por favor, elige una de las opci�nes:\n");
-				sc.next();
-			}
-		} while (!out);
+		int opcion = 0;
+		int idProduct = 0;
+		int idTicket = 0;
+		int p = 0;
 
-		System.out.println("El producto est� a�adido");
+		try {
+			do {
+				System.out.println("\nIndica una de las siguientes opciones" + "\n1. Crear nuevo ticket"
+						+ "\n2. Añadir producto a un ticket existente" + "\n0. Salir");
+				opcion = sc.nextInt();
+
+				switch (opcion) {
+				case 1:
+					// Creamos el ticket
+					Ticket ticket1 = crearTicket();
+					// Mostramos el stock para poder añadir al ticket
+					System.out.println(floristeria1.getStock());
+					System.out.print("Introduzca el id del producto que deseas añadir: ");
+					idProduct = sc.nextInt();
+					p = floristeria1.buscarProducto(idProduct);
+					ticket1.addEnTicket(floristeria1.getProductos().get(p));
+					// Añadimos el producto al ticket
+					tickets.add(ticket1);
+					// Eliminamos el producto del stock actual
+					floristeria1.remove(p);
+					// Eliminamos el producto del txt de productos
+					GestionArchivo.FileWriterProductos(floristeria1, false);
+					// Añadimos el ticket al txt de tickets
+					GestionArchivo.FileWriterTickets(tickets, true);
+					break;
+
+				case 2:
+					// Mostramos los tickets que tenemos
+					tickets.stream().forEach(System.out::println);
+					System.out.println("Introduzca el id del ticket: ");
+					idTicket = sc.nextInt();
+					// Mostramos el stock para poder añadir al ticket
+					System.out.println(floristeria1.getStock());
+					System.out.print("Introduzca el id del producto que deseas añadir: ");
+					idProduct = sc.nextInt();
+					p = floristeria1.buscarProducto(idProduct);
+					// Accedemos al ticket y añadimos el producto
+					tickets.get(idTicket).addEnTicket(floristeria1.getProductos().get(p));
+					// Eliminamos el producto del stock actual
+					floristeria1.remove(p);
+					// Eliminamos el producto del txt de productos
+					GestionArchivo.FileWriterProductos(floristeria1, false);
+					// Añadimos el ticket al txt de tickets
+					GestionArchivo.FileWriterTickets(tickets, false);
+					break;
+				}
+
+			} while (opcion != 0);
+		} catch (InputMismatchException e) {
+			System.out.println("Por favor, elige una de las opci�nes:\n");
+		}
 	}
 
 	public static void listaTickets(ArrayList<Ticket> tickets) {
