@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Main {
 
+	static Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
 
 		// Crear floristeria:
@@ -101,7 +103,7 @@ public class Main {
 
 	public static String anadirEnStock(Floristeria floristeria1) throws IOException {
 		String string = "";
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoraci�n");
 		int producto = sc.nextInt();
 		if (producto == 1) {
@@ -153,7 +155,7 @@ public class Main {
 	public static String eliminarEnStock(Floristeria floristeria1) throws IOException {
 		String string = "";
 		System.out.println(floristeria1.getStock());
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce el id del producto que quieres eliminar:");
 		int IdProducto = sc.nextInt();
 		int p = floristeria1.buscarProducto(IdProducto);
@@ -183,7 +185,7 @@ public class Main {
 	}
 
 	public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) throws IOException {
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		boolean out = false;
 		do {
 			System.out.println("�Quieres crear un nuevo ticket? " + "\n 1. si" + "\n 2. no");
