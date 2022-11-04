@@ -221,8 +221,9 @@ public class Main {
 				case 2:
 					// Mostramos los tickets que tenemos
 					tickets.stream().forEach(System.out::println);
-					System.out.println("Introduzca el id del ticket: ");
+					System.out.print("Introduzca el id del ticket: ");
 					idTicket = sc.nextInt();
+					do {
 					// Mostramos el stock para poder añadir al ticket
 					System.out.println(floristeria1.getStock());
 					System.out.print("Introduzca el id del producto que deseas añadir: ");
@@ -236,6 +237,11 @@ public class Main {
 					GestionArchivo.FileWriterProductos(floristeria1, false);
 					// Añadimos el ticket al txt de tickets
 					GestionArchivo.FileWriterTickets(tickets, false);
+					System.out.println("\n¿Quieres añadir otro producto al ticket?"
+							+ "\n1. Sí"
+							+ "\n2. No");
+					seguir = sc.nextInt();
+					} while (seguir != 2);
 					break;
 				}
 
