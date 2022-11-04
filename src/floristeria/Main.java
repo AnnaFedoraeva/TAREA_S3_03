@@ -183,6 +183,7 @@ public class Main {
 		int opcion = 0;
 		int idProduct = 0;
 		int idTicket = 0;
+		int seguir = 0;
 		int p = 0;
 
 		try {
@@ -195,6 +196,7 @@ public class Main {
 				case 1:
 					// Creamos el ticket
 					Ticket ticket1 = crearTicket();
+					do {
 					// Mostramos el stock para poder añadir al ticket
 					System.out.println(floristeria1.getStock());
 					System.out.print("Introduzca el id del producto que deseas añadir: ");
@@ -209,6 +211,11 @@ public class Main {
 					GestionArchivo.FileWriterProductos(floristeria1, false);
 					// Añadimos el ticket al txt de tickets
 					GestionArchivo.FileWriterTickets(tickets, true);
+					System.out.println("\n¿Quieres añadir otro producto al ticket?"
+							+ "\n1. Sí"
+							+ "\n2. No");
+					seguir = sc.nextInt();
+					} while (seguir != 2);
 					break;
 
 				case 2:

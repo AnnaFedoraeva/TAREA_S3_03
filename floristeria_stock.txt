@@ -1,4 +1,6 @@
 Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
 
+Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
+
 Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
 
