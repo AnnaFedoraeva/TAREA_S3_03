@@ -83,29 +83,6 @@ public class Main {
 
 	}
 
-	public static byte menu() {
-		byte option;
-		final byte MINIMO = 0;
-		final byte MAXIMO = 7;
-
-		do {
-			System.out.println("\nMEN� PRINCIPAL");
-			System.out.println("1. A�adir producto.");
-			System.out.println("2. Eliminar producto.");
-			System.out.println("3. Mostrar el stock con cantidades");
-			System.out.println("4. Mostrar el valor total de la floristeria");
-			System.out.println("5. A�adir productos en un ticket de compra");
-			System.out.println("6. Mostrar los tickets de compra antiguos.");
-			System.out.println("7. Mostrar el valor de todas las ventas.");
-			System.out.println("0. Salir de aplicacion.\n");
-			option = sc.nextByte();
-			if (option < MINIMO || option > MAXIMO) {
-				System.out.println("Escoge opcion valida");
-			}
-		} while (option < MINIMO || option > MAXIMO);
-		return option;
-	}
-
 	public static String anadirEnStock(Floristeria floristeria1) throws IOException {
 		String string = "";
 		System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoraci�n");
