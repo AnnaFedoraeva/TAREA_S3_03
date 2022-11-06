@@ -1,10 +1,8 @@
+Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
+
 Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
 
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
 Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
 
 Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
 
@@ -16,109 +14,5 @@ Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
 
 Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
 
-Producto id: 5, precio: 1.0 euros,  tipo de producto: Arbol, altura: 1.0
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 1.2 euros,  tipo de producto: Arbol, altura: 1.2
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 1.2 euros,  tipo de producto: Arbol, altura: 1.2
-
-Producto id: 6, precio: 1.0 euros,  tipo de producto: Arbol, altura: 1.0
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 1.0 euros,  tipo de producto: Arbol, altura: 1.0
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 2.22 euros,  tipo de producto: Arbol, altura: 2.0
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 3.33 euros,  tipo de producto: Arbol, altura: 1.23
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 2.33 euros,  tipo de producto: Arbol, altura: 1.22
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 2.33 euros,  tipo de producto: Arbol, altura: 1.22
-
-Producto id: 6, precio: 5.67 euros,  tipo de producto: Flor, color: rojo
-
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
-
-Producto id: 1, precio: 45.0 euros,  tipo de producto: Arbol, altura: 1.29
-
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
-
-Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
-
-Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
-
-Producto id: 5, precio: 2.33 euros,  tipo de producto: Arbol, altura: 1.22
-
-Producto id: 6, precio: 5.67 euros,  tipo de producto: Flor, color: rojo
-
-Producto id: 7, precio: 56.78 euros,  tipo de producto: Decoracion, material: plastico
+Producto id: 5, precio: 3.45 euros,  tipo de producto: Flor, color: rojo
 

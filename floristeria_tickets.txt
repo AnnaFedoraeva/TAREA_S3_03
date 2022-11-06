@@ -18,3 +18,63 @@ Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: pla
  
 fecha: 2022-11-04T14:30:00.502642500 
 
+Ticket id: 0 
+Precio Total: 49.0 euros.  
+Lista de productos:  
+Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
+ 
+ 
+fecha: 2022-11-06T16:37:57.218525400 
+
+Ticket id: 1 
+Precio Total: 40.0 euros.  
+Lista de productos:  
+Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
+ 
+ 
+fecha: 2022-11-06T16:37:57.219522900 
+
+Ticket id: 2 
+Precio Total: 13.0 euros.  
+Lista de productos:  
+Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
+ 
+ 
+fecha: 2022-11-06T16:37:57.219522900 
+
+Ticket id: 0 
+Precio Total: 49.0 euros.  
+Lista de productos:  
+Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
+ 
+ 
+fecha: 2022-11-06T16:38:03.774214800 
+
+Ticket id: 1 
+Precio Total: 40.0 euros.  
+Lista de productos:  
+Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
+ 
+ 
+fecha: 2022-11-06T16:38:03.775214200 
+
+Ticket id: 2 
+Precio Total: 62.0 euros.  
+Lista de productos:  
+Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
+ 
+Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
+ 
+ 
+fecha: 2022-11-06T16:38:03.775214200 
+
+Ticket id: 2 
+Precio Total: 62.0 euros.  
+Lista de productos:  
+Producto id: 4, precio: 13.0 euros,  tipo de producto: Decoracion, material: plastico
+ 
+Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
+ 
+ 
+fecha: 2022-11-06T16:38:03.775214200 
+
