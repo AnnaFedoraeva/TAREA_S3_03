@@ -11,6 +11,7 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+		int opcionMenu = 0;
 
 		// Creamos la floristeria
 		Floristeria floristeria1 = new Floristeria("Flower");
@@ -40,10 +41,17 @@ public class Main {
 		tickets.add(ticket1);
 		tickets.add(ticket2);
 
-		boolean exit = false;
-
 		do {
-			switch (menu()) {
+			System.out.println("Indique qué quiere hacer\n" + "1.  Añadir árbol\n" + "2.  Añadir flor\n"
+					+ "3.  Añadir decoración\n" + "4.  Mostrar todos los árboles, flores y decoraciones\n"
+					+ "5.  Eliminar árbol\n" + "6.  Eliminar flor\n" + "7.  Eliminar decoración\n"
+					+ "8.  Mostrar todo el stock con cantidades\n" + "9.  Mostrar valor total del stock\n"
+					+ "10. Crear ticket de compra\n" + "11. Mostrar lista de compras antiguas\n"
+					+ "12. Mostrar el total de dinero ganado\n" + "0.  Salir");
+
+			opcionMenu = sc.nextInt();
+
+			switch (opcionMenu) {
 			case 1:
 				anadirEnStock(floristeria1);
 				break;
@@ -68,10 +76,11 @@ public class Main {
 				break;
 			case 0:
 				System.out.println("Gracias por utilizar la aplicaci�n.");
-				exit = true;
 				break;
 			}
-		} while (!exit);
+
+		} while (opcionMenu != 0);
+
 	}
 
 	public static byte menu() {
