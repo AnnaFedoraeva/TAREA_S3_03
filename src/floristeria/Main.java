@@ -42,15 +42,10 @@ public class Main {
 		tickets.add(ticket2);
 
 		do {
-			System.out.println("Indique qué quiere hacer\n"
-					+ "1. Añadir producto\n"
-					+ "2. Eliminar producto\n"
-					+ "3. Mostrar las cantidades de stock\n"
-					+ "4. Mostrar valor total del stock\n"
-					+ "5. Añadir productos a un ticket de compra\n"
-					+ "6. Mostrar tickets de compra antiguos\n"
-					+ "7. Mostrar valor total de todas las ventas\n"
-					+ "0. Salir");
+			System.out.println("Indique qué quiere hacer\n" + "1. Añadir producto\n" + "2. Eliminar producto\n"
+					+ "3. Mostrar las cantidades de stock\n" + "4. Mostrar valor total del stock\n"
+					+ "5. Añadir productos a un ticket de compra\n" + "6. Mostrar tickets de compra antiguos\n"
+					+ "7. Mostrar valor total de todas las ventas\n" + "0. Salir");
 
 			opcionMenu = sc.nextInt();
 
@@ -137,11 +132,14 @@ public class Main {
 	}
 
 	public static String eliminarEnStock(Floristeria floristeria1) throws IOException {
+		int IdProducto = 0;
+		int p = 0;
 		String string = "";
+
 		System.out.println(floristeria1.getStock());
-		System.out.println("Introduce el id del producto que quieres eliminar:");
-		int IdProducto = sc.nextInt();
-		int p = floristeria1.buscarProducto(IdProducto);
+		System.out.print("Introduce el id del producto que quieres eliminar:");
+		IdProducto = sc.nextInt();
+		p = floristeria1.buscarProducto(IdProducto);
 		floristeria1.remove(p);
 		string.equals("El producto ha sido eliminado");
 		GestionArchivo.FileWriterProductos(floristeria1, false);
