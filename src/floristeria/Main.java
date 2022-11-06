@@ -131,19 +131,19 @@ public class Main {
 
 	}
 
-	public static String eliminarEnStock(Floristeria floristeria1) throws IOException {
+	public static void eliminarEnStock(Floristeria floristeria1) throws IOException {
 		int IdProducto = 0;
 		int p = 0;
-		String string = "";
-
+	
 		System.out.println(floristeria1.getStock());
-		System.out.print("Introduce el id del producto que quieres eliminar:");
+		System.out.print("Introduce el id del producto que quieres eliminar: ");
 		IdProducto = sc.nextInt();
 		p = floristeria1.buscarProducto(IdProducto);
 		floristeria1.remove(p);
-		string.equals("El producto ha sido eliminado");
+		System.out.println("El producto ha sido eliminado");
+		System.out.println("************************\n");
 		GestionArchivo.FileWriterProductos(floristeria1, false);
-		return string;
+		
 	}
 
 	public static String verStock(Floristeria floristeria1) {
