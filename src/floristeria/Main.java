@@ -42,12 +42,15 @@ public class Main {
 		tickets.add(ticket2);
 
 		do {
-			System.out.println("Indique qué quiere hacer\n" + "1.  Añadir árbol\n" + "2.  Añadir flor\n"
-					+ "3.  Añadir decoración\n" + "4.  Mostrar todos los árboles, flores y decoraciones\n"
-					+ "5.  Eliminar árbol\n" + "6.  Eliminar flor\n" + "7.  Eliminar decoración\n"
-					+ "8.  Mostrar todo el stock con cantidades\n" + "9.  Mostrar valor total del stock\n"
-					+ "10. Crear ticket de compra\n" + "11. Mostrar lista de compras antiguas\n"
-					+ "12. Mostrar el total de dinero ganado\n" + "0.  Salir");
+			System.out.println("Indique qué quiere hacer\n"
+					+ "1. Añadir producto\n"
+					+ "2. Eliminar producto\n"
+					+ "3. Mostrar las cantidades de stock\n"
+					+ "4. Mostrar valor total del stock\n"
+					+ "5. Añadir productos a un ticket de compra\n"
+					+ "6. Mostrar tickets de compra antiguos\n"
+					+ "7. Mostrar valor total de todas las ventas\n"
+					+ "0. Salir");
 
 			opcionMenu = sc.nextInt();
 
@@ -75,7 +78,7 @@ public class Main {
 				System.out.println(ventasGanancias(tickets));
 				break;
 			case 0:
-				System.out.println("Gracias por utilizar la aplicaci�n.");
+				System.out.println("Gracias por utilizar la aplicación.");
 				break;
 			}
 
