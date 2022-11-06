@@ -90,27 +90,31 @@ public class Main {
 
 		switch (producto) {
 		case 1 -> {
-			System.out.print("Introduce la altura del arbol: ");
+			System.out.print("\nIntroduce la altura del arbol: ");
 			altura = sc.nextDouble();
 			System.out.print("Introduce el precio del arbol: ");
 			precioA = sc.nextDouble();
 			Arbol arbol2 = new Arbol(precioA, altura);
 			floristeria1.addArbol(arbol2);
 			GestionArchivo.FileWriterProductos(floristeria1, true);
+			System.out.print("\nSe ha añadido el producto correctamente\n");
+			System.out.print("***********************\n");
 		}
 
 		case 2 -> {
-			System.out.print("Introduce el color de la flor: ");
+			System.out.print("\nIntroduce el color de la flor: ");
 			String color = sc.next();
 			System.out.print("Introduce el precio de la flor: ");
 			precioF = sc.nextDouble();
 			Flor flor2 = new Flor(precioF, color);
 			floristeria1.addFlor(flor2);
 			GestionArchivo.FileWriterProductos(floristeria1, true);
+			System.out.print("\nSe ha añadido el producto correctamente\n");
+			System.out.print("***********************\n");
 		}
 
 		case 3 -> {
-			System.out.print("Introduce el precio de la decoración: ");
+			System.out.print("\nIntroduce el precio de la decoración: ");
 			precioD = sc.nextDouble();
 			boolean out = false;
 			while (!out) {
@@ -132,6 +136,8 @@ public class Main {
 			Decoracion deco2 = new Decoracion(precioD, material);
 			floristeria1.addDeco(deco2);
 			GestionArchivo.FileWriterProductos(floristeria1, true);
+			System.out.print("\nSe ha añadido el producto correctamente\n");
+			System.out.print("***********************\n");
 		}
 		}
 	}
