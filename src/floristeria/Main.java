@@ -61,7 +61,7 @@ public class Main {
 				System.out.println(floristeria1.getStock());
 				break;
 			case 4:
-				System.out.println(verValorStock(floristeria1));
+				verValorStock(floristeria1);
 				break;
 			case 5:
 				anadirEnTicket(floristeria1, tickets);
@@ -134,7 +134,7 @@ public class Main {
 	public static void eliminarEnStock(Floristeria floristeria1) throws IOException {
 		int IdProducto = 0;
 		int p = 0;
-	
+
 		System.out.println(floristeria1.getStock());
 		System.out.print("Introduce el id del producto que quieres eliminar: ");
 		IdProducto = sc.nextInt();
@@ -143,17 +143,17 @@ public class Main {
 		System.out.println("El producto ha sido eliminado");
 		System.out.println("************************\n");
 		GestionArchivo.FileWriterProductos(floristeria1, false);
-		
+
 	}
 
 	public static String verStock(Floristeria floristeria1) {
 		return floristeria1.cantidadStock();
 	}
 
-	public static String verValorStock(Floristeria floristeria1) {
-		String string = "El valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
-				+ floristeria1.valorTotal() + " euros.";
-		return string;
+	public static void verValorStock(Floristeria floristeria1) {
+		System.out.println("\nEl valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
+				+ floristeria1.valorTotal() + " euros.");
+		System.out.println("************************\n");
 	}
 
 	public static Ticket crearTicket() {
