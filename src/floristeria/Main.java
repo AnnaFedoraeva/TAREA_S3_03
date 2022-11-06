@@ -9,6 +9,7 @@ public class Main {
     final static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+		int opcionMenu = 0;
 
         // Creamos la floristeria
         Floristeria floristeria1 = new Floristeria("Flower");
@@ -38,50 +39,45 @@ public class Main {
         tickets.add(ticket1);
         tickets.add(ticket2);
 
-        boolean exit = false;
+		do {
+			System.out.println("Indique qué quiere hacer\n" + "1. Añadir producto\n" + "2. Eliminar producto\n"
+					+ "3. Mostrar las cantidades de stock\n" + "4. Mostrar valor total del stock\n"
+					+ "5. Añadir productos a un ticket de compra\n" + "6. Mostrar tickets de compra antiguos\n"
+					+ "7. Mostrar valor total de todas las ventas\n" + "0. Salir");
 
-        do {
-            switch (menu()) {
-                case 1 -> anadirEnStock(floristeria1);
-                case 2 -> eliminarEnStock(floristeria1);
-                case 3 -> {
-                    System.out.println(verStock(floristeria1));
-                    System.out.println(floristeria1.getStock());
-                }
-                case 4 -> System.out.println(verValorStock(floristeria1));
-                case 5 -> anadirEnTicket(floristeria1, tickets);
-                case 6 -> listaTickets(tickets);
-                case 7 -> System.out.println(ventasGanancias(tickets));
-                case 0 -> {
-                    System.out.println("Gracias por utilizar la aplicaci�n.");
-                    exit = true;
-                }
-            }
-        } while (!exit);
-    }
+			opcionMenu = sc.nextInt();
 
-    public static byte menu() {
-        byte option;
-        final byte MINIMO = 0;
-        final byte MAXIMO = 7;
+			switch (opcionMenu) {
+			case 1:
+				anadirEnStock(floristeria1);
+				break;
+			case 2:
+				eliminarEnStock(floristeria1);
+				break;
+			case 3:
+				System.out.println(verStock(floristeria1));
+				System.out.println(floristeria1.getStock());
+				break;
+			case 4:
+				verValorStock(floristeria1);
+				break;
+			case 5:
+				anadirEnTicket(floristeria1, tickets);
+				break;
+			case 6:
+				listaTickets(tickets);
+				break;
+			case 7:
+				System.out.println(ventasGanancias(tickets));
+				break;
+			case 0:
+				System.out.println("Gracias por utilizar la aplicación.");
+				break;
+			}
 
-        do {
-            System.out.println("\nMEN� PRINCIPAL");
-            System.out.println("1. A�adir producto.");
-            System.out.println("2. Eliminar producto.");
-            System.out.println("3. Mostrar el stock con cantidades");
-            System.out.println("4. Mostrar el valor total de la floristeria");
-            System.out.println("5. A�adir productos en un ticket de compra");
-            System.out.println("6. Mostrar los tickets de compra antiguos.");
-            System.out.println("7. Mostrar el valor de todas las ventas.");
-            System.out.println("0. Salir de aplicacion.\n");
-            option = sc.nextByte();
-            if (option < MINIMO || option > MAXIMO) {
-                System.out.println("Escoge opcion valida");
-            }
-        } while (option < MINIMO || option > MAXIMO);
-        return option;
-    }
+		} while (opcionMenu != 0);
+
+	}
 
     public static void anadirEnStock(Floristeria floristeria1) {
 
@@ -138,26 +134,32 @@ public class Main {
 
     }
 
-    public static void eliminarEnStock(Floristeria floristeria1) {
 
-        System.out.println(floristeria1.getStock());
-        System.out.println("Introduce el id del producto que quieres eliminar:");
-        int IdProducto = sc.nextInt();
-        int p = floristeria1.buscarProducto(IdProducto);
-        floristeria1.remove(p);
 
-        GestionArchivo.FileWriterProductos(floristeria1, false);
+	public static void eliminarEnStock(Floristeria floristeria1) throws IOException {
+		int IdProducto = 0;
+		int p = 0;
 
-    }
+		System.out.println(floristeria1.getStock());
+		System.out.print("Introduce el id del producto que quieres eliminar: ");
+		IdProducto = sc.nextInt();
+		p = floristeria1.buscarProducto(IdProducto);
+		floristeria1.remove(p);
+		System.out.println("El producto ha sido eliminado");
+		System.out.println("************************\n");
+		GestionArchivo.FileWriterProductos(floristeria1, false);
+
+	}
 
     public static String verStock(Floristeria floristeria1) {
         return floristeria1.countProductos();
     }
 
-    public static String verValorStock(Floristeria floristeria1) {
-        return "El valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
-                + floristeria1.valorTotal() + " euros.";
-    }
+	public static void verValorStock(Floristeria floristeria1) {
+		System.out.println("\nEl valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
+				+ floristeria1.valorTotal() + " euros.");
+		System.out.println("************************\n");
+	}
 
     public static Ticket crearTicket() {
 
