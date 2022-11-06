@@ -10,7 +10,7 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+    public static void main(String[] args)  {
 
         // Creamos la floristeria
         Floristeria floristeria1 = new Floristeria("Flower");
@@ -97,7 +97,7 @@ public class Main {
         return option;
     }
 
-    public static void anadirEnStock(Floristeria floristeria1) throws IOException {
+    public static void anadirEnStock(Floristeria floristeria1)  {
 
         System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoraci�n");
         int producto = sc.nextInt();
@@ -145,7 +145,7 @@ public class Main {
 
     }
 
-    public static void eliminarEnStock(Floristeria floristeria1) throws IOException {
+    public static void eliminarEnStock(Floristeria floristeria1) {
 
         System.out.println(floristeria1.getStock());
         System.out.println("Introduce el id del producto que quieres eliminar:");
@@ -174,7 +174,7 @@ public class Main {
         return ticket;
     }
 
-    public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) throws IOException {
+    public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets){
         int opcion = 0;
         int idProduct = 0;
         int idTicket = 0;
