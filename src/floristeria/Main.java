@@ -41,7 +41,7 @@ public class Main {
 
 		do {
 			System.out.println("""
-					
+
 					Indique qué quiere hacer
 					1. Añadir producto
 					2. Eliminar producto
@@ -120,9 +120,10 @@ public class Main {
 			while (!out) {
 				System.out.println("""
 						Elige material de la decoración:
-						1. plastico
-						2. madera""");
+						1. Plástico
+						2. Madera""");
 				int n = sc.nextInt();
+				
 				if (n == 1) {
 					material = "plastico";
 					out = true;
@@ -151,7 +152,7 @@ public class Main {
 		IdProducto = sc.nextInt();
 		p = floristeria1.buscarProducto(IdProducto);
 		floristeria1.remove(p);
-		System.out.println("El producto ha sido eliminado");
+		System.out.println("El producto ha sido eliminado correctamente");
 		System.out.println("************************\n");
 		GestionArchivo.FileWriterProductos(floristeria1, false);
 

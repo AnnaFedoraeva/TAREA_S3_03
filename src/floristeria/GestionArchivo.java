@@ -20,7 +20,7 @@ public final class GestionArchivo {
 			}
 			writer.flush();
 			writer.close();
-			//System.out.println("Data Entered in to the file successfully");
+			// System.out.println("Data Entered in to the file successfully");
 		} catch (IOException e) {
 			System.out.println("Error saving data to the file");
 		}
@@ -36,7 +36,7 @@ public final class GestionArchivo {
 			}
 			writer.flush();
 			writer.close();
-			//System.out.println("Data Entered in to the file successfully");
+			// System.out.println("Data Entered in to the file successfully");
 		} catch (IOException e) {
 			System.out.println("Error saving data to the file");
 		}
