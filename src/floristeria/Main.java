@@ -1,16 +1,14 @@
 package floristeria;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
-    static Scanner sc = new Scanner(System.in);
+    final static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
         // Creamos la floristeria
         Floristeria floristeria1 = new Floristeria("Flower");
@@ -44,32 +42,20 @@ public class Main {
 
         do {
             switch (menu()) {
-                case 1:
-                    anadirEnStock(floristeria1);
-                    break;
-                case 2:
-                    eliminarEnStock(floristeria1);
-                    break;
-                case 3:
+                case 1 -> anadirEnStock(floristeria1);
+                case 2 -> eliminarEnStock(floristeria1);
+                case 3 -> {
                     System.out.println(verStock(floristeria1));
                     System.out.println(floristeria1.getStock());
-                    break;
-                case 4:
-                    System.out.println(verValorStock(floristeria1));
-                    break;
-                case 5:
-                    anadirEnTicket(floristeria1, tickets);
-                    break;
-                case 6:
-                    listaTickets(tickets);
-                    break;
-                case 7:
-                    System.out.println(ventasGanancias(tickets));
-                    break;
-                case 0:
+                }
+                case 4 -> System.out.println(verValorStock(floristeria1));
+                case 5 -> anadirEnTicket(floristeria1, tickets);
+                case 6 -> listaTickets(tickets);
+                case 7 -> System.out.println(ventasGanancias(tickets));
+                case 0 -> {
                     System.out.println("Gracias por utilizar la aplicaci�n.");
                     exit = true;
-                    break;
+                }
             }
         } while (!exit);
     }
@@ -97,9 +83,13 @@ public class Main {
         return option;
     }
 
-    public static void anadirEnStock(Floristeria floristeria1)  {
+    public static void anadirEnStock(Floristeria floristeria1) {
 
-        System.out.println("Elige el producto:" + "\n" + "1. arbol" + "\n" + "2. flor" + "\n" + "3. decoraci�n");
+        System.out.println("""
+                Elige el producto:
+                1. arbol
+                2. flor
+                3. decoraci�n""");
         int producto = sc.nextInt();
         if (producto == 1) {
             System.out.println("Introduce la altura del arbol:");
@@ -125,7 +115,10 @@ public class Main {
             String material = "";
             boolean out = false;
             while (!out) {
-                System.out.println("Elige material de la decoraci�n:" + "\n" + "1. plastico" + "\n" + "2. madera");
+                System.out.println("""
+                        Elige material de la decoraci�n:
+                        1. plastico
+                        2. madera""");
                 int n = sc.nextInt();
                 if (n == 1) {
                     material = "plastico";
@@ -162,33 +155,34 @@ public class Main {
     }
 
     public static String verValorStock(Floristeria floristeria1) {
-        String string = "El valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
+        return "El valor total del Stock de la tienda " + floristeria1.getNombre() + " es "
                 + floristeria1.valorTotal() + " euros.";
-        return string;
     }
 
     public static Ticket crearTicket() {
 
-        Ticket ticket = new Ticket();
-
-        return ticket;
+        return new Ticket();
     }
 
-    public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets){
-        int opcion = 0;
-        int idProduct = 0;
-        int idTicket = 0;
-        int seguir = 0;
-        int p = 0;
+    public static void anadirEnTicket(Floristeria floristeria1, ArrayList<Ticket> tickets) {
+        int opcion;
+        int idProduct;
+        int idTicket;
+        int seguir;
+        int p;
 
         try {
             do {
-                System.out.println("\nIndica una de las siguientes opciones" + "\n1. Crear nuevo ticket"
-                        + "\n2. Añadir producto a un ticket existente" + "\n0. Salir");
+                System.out.println("""
+
+                        Indica una de las siguientes opciones
+                        1. Crear nuevo ticket
+                        2. Añadir producto a un ticket existente
+                        0. Salir""");
                 opcion = sc.nextInt();
 
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         // Creamos el ticket
                         Ticket ticket1 = crearTicket();
                         do {
@@ -206,14 +200,17 @@ public class Main {
                             GestionArchivo.FileWriterProductos(floristeria1, false);
                             // Añadimos el ticket al txt de tickets
                             GestionArchivo.FileWriterTickets(tickets, true);
-                            System.out.println("\n¿Quieres añadir otro producto al ticket?" + "\n1. Sí" + "\n2. No");
+                            System.out.println("""
+
+                                    ¿Quieres añadir otro producto al ticket?
+                                    1. Sí
+                                    2. No""");
                             seguir = sc.nextInt();
                         } while (seguir != 2);
-                        break;
-
-                    case 2:
+                    }
+                    case 2 -> {
                         // Mostramos los tickets que tenemos
-                        tickets.stream().forEach(System.out::println);
+                        tickets.forEach(System.out::println);
                         System.out.print("Introduzca el id del ticket: ");
                         idTicket = sc.nextInt();
                         do {
@@ -230,10 +227,14 @@ public class Main {
                             GestionArchivo.FileWriterProductos(floristeria1, false);
                             // Añadimos el ticket al txt de tickets
                             GestionArchivo.FileWriterTickets(tickets, false);
-                            System.out.println("\n¿Quieres añadir otro producto al ticket?" + "\n1. Sí" + "\n2. No");
+                            System.out.println("""
+
+                                    ¿Quieres añadir otro producto al ticket?
+                                    1. Sí
+                                    2. No""");
                             seguir = sc.nextInt();
                         } while (seguir != 2);
-                        break;
+                    }
                 }
 
             } while (opcion != 0);
@@ -243,7 +244,7 @@ public class Main {
     }
 
     public static void listaTickets(ArrayList<Ticket> tickets) {
-        tickets.stream().forEach(System.out::println);
+        tickets.forEach(System.out::println);
     }
 
     public static double ventasGanancias(ArrayList<Ticket> tickets) {
@@ -252,16 +253,6 @@ public class Main {
             suma += t.precioTotal();
         }
         return suma;
-    }
-
-    public static int buscarTicket(int t, ArrayList<Ticket> tickets) {
-        int i = -1;
-        for (Ticket ticket : tickets) {
-            if (ticket.getId() == t) {
-                i = tickets.indexOf(ticket);
-            }
-        }
-        return i;
     }
 
 }

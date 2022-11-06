@@ -1,76 +1,45 @@
 package floristeria;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Ticket {
 
-	private int id;
-	private static int idTicket = 0;
-	private double precioTotal;
-	private List<Producto> productosVendidos = new ArrayList<>();
-	private LocalDateTime fecha;
+    private static int idTicket = 0;
+    private final int id;
+    private final List<Producto> productosVendidos = new ArrayList<>();
 
-	public Ticket(List<Producto> productosVendidos) {
-		super();
-		this.id = idTicket;
-		idTicket++;
-		this.precioTotal = productosVendidos.stream().mapToDouble(Producto::getPrecio).sum();
-		this.productosVendidos = new ArrayList<>();
-		this.fecha = LocalDateTime.now();
-	}
+    public Ticket() {
+        this.id = idTicket;
+        idTicket++;
 
-	public Ticket() {
-		this.id = idTicket;
-		idTicket++;
-		this.precioTotal = productosVendidos.stream().mapToDouble(Producto::getPrecio).sum();
-		this.fecha = LocalDateTime.now();
+    }
 
-	}
+    public double precioTotal() {
+        return productosVendidos.stream().mapToDouble(Producto::getPrecio).sum();
+    }
 
-	public double precioTotal() {
-		double precio = productosVendidos.stream().mapToDouble(Producto::getPrecio).sum();
-		return precio;
-	}
+    public LocalDateTime getFecha() {
+        return LocalDateTime.now();
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void addEnTicket(Producto p) {
+        this.productosVendidos.add(p);
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String listarProductos() {
+        StringBuilder lista = new StringBuilder("Lista de productos: " + " \n");
+        for (Producto p : productosVendidos) {
+            lista.append(p.toString()).append(" \n");
+        }
+        return lista.toString();
 
-	public List<Producto> getProductosVendidos() {
-		return productosVendidos;
-	}
+    }
 
-	public void setProductosVendidos(List<Producto> productosVendidos) {
-		this.productosVendidos = productosVendidos;
-	}
-
-	public LocalDateTime getFecha() {
-		return LocalDateTime.now();
-	}
-
-	public void addEnTicket(Producto p) {
-		this.productosVendidos.add(p);
-	}
-
-	public String listarProductos() {
-		String lista = "Lista de productos: " + " \n";
-		for (Producto p : productosVendidos) {
-			lista += p.toString() + " \n";
-		}
-		return lista;
-
-	}
-
-	@Override
-	public String toString() {
-		return "Ticket id: " + id + " \n" + "Precio Total: " + precioTotal() + " euros. " + " \n" + listarProductos()
-				+ " \n" + "fecha: " + getFecha() + " \n";
-	}
+    @Override
+    public String toString() {
+        return "Ticket id: " + id + " \n" + "Precio Total: " + precioTotal() + " euros. " + " \n" + listarProductos()
+                + " \n" + "fecha: " + getFecha() + " \n";
+    }
 }
