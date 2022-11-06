@@ -94,28 +94,25 @@ public class Floristeria {
 
 	}
 
+	public String countProductos() {
+		int countArbol = 0;
+		int countFlores = 0;
+		int countDecoracion = 0;
 
-	public String cantidadStock() {
-
-		List<Arbol> arboles = new ArrayList<>();
-		List<Flor> flores = new ArrayList<>();
-		List<Decoracion> decoraciones = new ArrayList<>();
-
-		for (Producto p : productos) {
-
-			if (p instanceof Arbol)
-				arboles.add((Arbol) p);
-			if (p instanceof Flor)
-				flores.add((Flor) p);
-			if (p instanceof Decoracion)
-				decoraciones.add((Decoracion) p);
-
+		for (Producto producto : productos) {
+			if (producto instanceof Arbol) {
+				countArbol++;
+			}
+			else if (producto instanceof Flor) {
+				countFlores++;
+			}
+			else {
+				countDecoracion++;
+			}
 		}
 
-		String cantidades = "Floristeria " + nombre + " tiene: \n" + "arboles: " + arboles.size() + "\n" + "flores: "
-				+ flores.size() + "\n" + "decoraci�n: " + decoraciones.size() + "\n";
-
-		return cantidades;
+		return "Floristeria " + nombre + " tiene: \n" + "arboles: " + countArbol + "\n" + "flores: "
+				+ countFlores + "\n" + "decoraci�n: " + countDecoracion + "\n";
 	}
 
 	public String getNombre() {
