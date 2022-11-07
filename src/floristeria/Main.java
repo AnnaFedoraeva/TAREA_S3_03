@@ -36,6 +36,17 @@ public class Main {
 		floristeria1.addDeco(deco1);
 		floristeria1.addDeco(deco2);
 
+		// Creamos tickets iniciales y los añadimos
+
+		Ticket ticket1 = new Ticket();
+		Ticket ticket2 = new Ticket();
+
+		ticket1.addEnTicket(floristeria1.getProductos().get(2));
+		ticket2.addEnTicket(floristeria1.getProductos().get(0));
+
+		tickets.add(ticket1);
+		tickets.add(ticket2);
+
 		do {
 			System.out.println("""
 
@@ -177,17 +188,6 @@ public class Main {
 		int seguir;
 		int p;
 
-		// Creamos tickets iniciales y los añadimos
-
-		Ticket ticket1 = new Ticket();
-		Ticket ticket2 = new Ticket();
-
-		ticket1.addEnTicket(floristeria1.getProductos().get(2));
-		ticket2.addEnTicket(floristeria1.getProductos().get(0));
-
-		tickets.add(ticket1);
-		tickets.add(ticket2);
-
 		try {
 			do {
 				System.out.println("""
@@ -200,17 +200,16 @@ public class Main {
 
 				switch (opcion) {
 				case 1 -> {
-					// Creamos el ticket
-					
+					Ticket ticket3 = crearTicket();
 					do {
 						// Mostramos el stock para poder añadir al ticket
 						System.out.println(floristeria1.getStock());
 						System.out.print("Introduzca el id del producto que deseas añadir: ");
 						idProduct = sc.nextInt();
 						p = floristeria1.buscarProducto(idProduct);
-						ticket1.addEnTicket(floristeria1.getProductos().get(p));
+						ticket3.addEnTicket(floristeria1.getProductos().get(p));
 						// Añadimos el producto al ticket
-						tickets.add(ticket1);
+						tickets.add(ticket3);
 						// Eliminamos el producto del stock actual
 						floristeria1.remove(p);
 						// Eliminamos el producto del txt de productos
