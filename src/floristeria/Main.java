@@ -214,13 +214,18 @@ public class Main {
 						floristeria1.remove(p);
 						// Eliminamos el producto del txt de productos
 						GestionArchivo.FileWriterProductos(floristeria1, false);
-						// Añadimos el ticket al txt de tickets
-						GestionArchivo.FileWriterTickets(tickets, true);
+
 						System.out.println("""
 								¿Quieres añadir otro producto al ticket?
 								1. Sí
 								2. No""");
 						seguir = sc.nextInt();
+
+						if (seguir == 2) {
+							// Añadimos el ticket al txt de tickets
+							GestionArchivo.FileWriterTickets(tickets, false);
+						}
+
 					} while (seguir != 2);
 				}
 				case 2 -> {
