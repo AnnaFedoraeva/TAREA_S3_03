@@ -201,7 +201,7 @@ public class Main {
 				switch (opcion) {
 				case 1 -> {
 					// Creamos el ticket
-					Ticket ticket1 = crearTicket();
+					
 					do {
 						// Mostramos el stock para poder añadir al ticket
 						System.out.println(floristeria1.getStock());
