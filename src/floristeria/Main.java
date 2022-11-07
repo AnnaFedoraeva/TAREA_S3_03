@@ -9,6 +9,7 @@ public class Main {
 	final static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		ArrayList<Ticket> tickets = new ArrayList<>();
 		int opcionMenu;
 
 		// Creamos la floristeria
@@ -19,25 +20,21 @@ public class Main {
 		Arbol arbol2 = new Arbol(45, 1.29);
 		Arbol arbol3 = new Arbol(49, 1.34);
 		Flor flor = new Flor(12, "rosa");
+		Flor flor1 = new Flor(18.97, "rojo");
+		Flor flor2 = new Flor(1.99, "naranja");
 		Decoracion deco = new Decoracion(13, "plastico");
+		Decoracion deco1 = new Decoracion(56.78, "madera");
+		Decoracion deco2 = new Decoracion(2.99, "plastico");
 
 		floristeria1.addArbol(arbol1);
 		floristeria1.addArbol(arbol2);
 		floristeria1.addArbol(arbol3);
 		floristeria1.addFlor(flor);
+		floristeria1.addFlor(flor1);
+		floristeria1.addFlor(flor2);
 		floristeria1.addDeco(deco);
-
-		// Creamos tickets iniciales y los añadimos
-		ArrayList<Ticket> tickets = new ArrayList<>();
-
-		Ticket ticket1 = new Ticket();
-		Ticket ticket2 = new Ticket();
-
-		ticket1.addEnTicket(floristeria1.getProductos().get(2));
-		ticket2.addEnTicket(floristeria1.getProductos().get(0));
-
-		tickets.add(ticket1);
-		tickets.add(ticket2);
+		floristeria1.addDeco(deco1);
+		floristeria1.addDeco(deco2);
 
 		do {
 			System.out.println("""
@@ -123,7 +120,7 @@ public class Main {
 						1. Plástico
 						2. Madera""");
 				int n = sc.nextInt();
-				
+
 				if (n == 1) {
 					material = "plastico";
 					out = true;
@@ -179,6 +176,17 @@ public class Main {
 		int idTicket;
 		int seguir;
 		int p;
+
+		// Creamos tickets iniciales y los añadimos
+
+		Ticket ticket1 = new Ticket();
+		Ticket ticket2 = new Ticket();
+
+		ticket1.addEnTicket(floristeria1.getProductos().get(2));
+		ticket2.addEnTicket(floristeria1.getProductos().get(0));
+
+		tickets.add(ticket1);
+		tickets.add(ticket2);
 
 		try {
 			do {
