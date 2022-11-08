@@ -104,7 +104,7 @@ public class Main {
 			precioA = sc.nextDouble();
 			Arbol arbol2 = new Arbol(precioA, altura);
 			floristeria1.addArbol(arbol2);
-			GestionArchivo.FileWriterProductos(floristeria1, true);
+			GestionArchivo.FileWriterProductos(floristeria1, false);
 			System.out.print("\nSe ha añadido el producto correctamente\n");
 			System.out.print("***********************\n");
 		}
@@ -116,7 +116,7 @@ public class Main {
 			precioF = sc.nextDouble();
 			Flor flor2 = new Flor(precioF, color);
 			floristeria1.addFlor(flor2);
-			GestionArchivo.FileWriterProductos(floristeria1, true);
+			GestionArchivo.FileWriterProductos(floristeria1, false);
 			System.out.print("\nSe ha añadido el producto correctamente\n");
 			System.out.print("***********************\n");
 		}
@@ -144,7 +144,7 @@ public class Main {
 			}
 			Decoracion deco2 = new Decoracion(precioD, material);
 			floristeria1.addDeco(deco2);
-			GestionArchivo.FileWriterProductos(floristeria1, true);
+			GestionArchivo.FileWriterProductos(floristeria1, false);
 			System.out.print("\nSe ha añadido el producto correctamente\n");
 			System.out.print("***********************\n");
 		}
