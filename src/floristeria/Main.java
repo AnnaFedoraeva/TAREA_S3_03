@@ -208,8 +208,7 @@ public class Main {
 						idProduct = sc.nextInt();
 						p = floristeria1.buscarProducto(idProduct);
 						ticket3.addEnTicket(floristeria1.getProductos().get(p));
-						// Añadimos el producto al ticket
-						tickets.add(ticket3);
+						
 						// Eliminamos el producto del stock actual
 						floristeria1.remove(p);
 						// Eliminamos el producto del txt de productos
@@ -221,12 +220,11 @@ public class Main {
 								2. No""");
 						seguir = sc.nextInt();
 
-						if (seguir == 2) {
-							// Añadimos el ticket al txt de tickets
-							GestionArchivo.FileWriterTickets(tickets, false);
-						}
-
 					} while (seguir != 2);
+					// Añadimos el producto al ticket
+					tickets.add(ticket3);
+					// Añadimos el ticket al txt de tickets
+					GestionArchivo.FileWriterTickets(tickets, false);
 				}
 				case 2 -> {
 					// Mostramos los tickets que tenemos

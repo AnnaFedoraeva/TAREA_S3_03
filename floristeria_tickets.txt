@@ -4,7 +4,7 @@ Lista de productos:
 Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
  
  
-fecha: 2022-11-07T19:48:17.781658300 
+fecha: 2022-11-08T09:23:16.144529800 
 
 Ticket id: 1 
 Precio Total: 40.0 euros.  
@@ -12,61 +12,17 @@ Lista de productos:
 Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
  
  
-fecha: 2022-11-07T19:48:17.782690800 
+fecha: 2022-11-08T09:23:16.145536800 
 
 Ticket id: 2 
-Precio Total: 147.77 euros.  
+Precio Total: 32.959999999999994 euros.  
 Lista de productos:  
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
- 
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
- 
 Producto id: 5, precio: 1.99 euros,  tipo de producto: Flor, color: naranja
  
-Producto id: 7, precio: 56.78 euros,  tipo de producto: Decoracion, material: madera
+Producto id: 4, precio: 18.97 euros,  tipo de producto: Flor, color: rojo
+ 
+Producto id: 3, precio: 12.0 euros,  tipo de producto: Flor, color: rosa
  
  
-fecha: 2022-11-07T19:48:17.782690800 
-
-Ticket id: 2 
-Precio Total: 147.77 euros.  
-Lista de productos:  
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
- 
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
- 
-Producto id: 5, precio: 1.99 euros,  tipo de producto: Flor, color: naranja
- 
-Producto id: 7, precio: 56.78 euros,  tipo de producto: Decoracion, material: madera
- 
- 
-fecha: 2022-11-07T19:48:17.782690800 
-
-Ticket id: 2 
-Precio Total: 147.77 euros.  
-Lista de productos:  
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
- 
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
- 
-Producto id: 5, precio: 1.99 euros,  tipo de producto: Flor, color: naranja
- 
-Producto id: 7, precio: 56.78 euros,  tipo de producto: Decoracion, material: madera
- 
- 
-fecha: 2022-11-07T19:48:17.782690800 
-
-Ticket id: 2 
-Precio Total: 147.77 euros.  
-Lista de productos:  
-Producto id: 0, precio: 40.0 euros,  tipo de producto: Arbol, altura: 1.11
- 
-Producto id: 2, precio: 49.0 euros,  tipo de producto: Arbol, altura: 1.34
- 
-Producto id: 5, precio: 1.99 euros,  tipo de producto: Flor, color: naranja
- 
-Producto id: 7, precio: 56.78 euros,  tipo de producto: Decoracion, material: madera
- 
- 
-fecha: 2022-11-07T19:48:17.782690800 
+fecha: 2022-11-08T09:23:16.145536800 
 
